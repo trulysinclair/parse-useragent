@@ -41,7 +41,7 @@ module.exports.express = function () {
         ua.testWechat();
         req.useragent = ua.Agent;
         if ('function' === typeof res.locals) {
-            res.locals({useragent: ua.Agent});
+            res.locals({ useragent: ua.Agent });
         } else {
             res.locals.useragent = ua.Agent;
         }

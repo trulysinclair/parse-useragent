@@ -226,6 +226,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@trulysinclair/parse-useragent@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@trulysinclair/parse-useragent@workspace:."
+  dependencies:
+    bower: "*"
+    dprint: ^0.39.1
+    express: ">= 4.16.4"
+    grunt: ^1.2.1
+    grunt-contrib-clean: ^1.0.0
+    grunt-contrib-uglify: ^1.0.1
+    jshint: "*"
+    load-grunt-tasks: ^3.2.0
+    nodeunit: ^0.11.3
+    turbo: ^1.10.9
+    typescript: ^5.1.6
+  languageName: unknown
+  linkType: soft
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -1217,24 +1235,6 @@ __metadata:
   checksum: 2efe6ed407d229981b1b6ceb552438fbc9e5c7d6a6751ad6ced3e0aa5cf12f0b299da695e90d6c2ac79191b5c53c613e508f7149e4573abfbb540698ddb7301a
   languageName: node
   linkType: hard
-
-"express-useragent@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "express-useragent@workspace:."
-  dependencies:
-    bower: "*"
-    dprint: ^0.39.1
-    express: ">= 4.16.4"
-    grunt: ^1.2.1
-    grunt-contrib-clean: ^1.0.0
-    grunt-contrib-uglify: ^1.0.1
-    jshint: "*"
-    load-grunt-tasks: ^3.2.0
-    nodeunit: ^0.11.3
-    turbo: ^1.10.9
-    typescript: ^5.1.6
-  languageName: unknown
-  linkType: soft
 
 "express@npm:>= 4.16.4":
   version: 4.18.2

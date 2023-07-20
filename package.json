@@ -11,7 +11,7 @@
   "author": {
     "name": "Sinclair",
     "email": "truly.sinclair@gmail.com",
-    "url": "https://github,com/trulysinclair"
+    "url": "https://github.com/trulysinclair"
   },
   "keywords": [
     "useragent",
@@ -23,12 +23,11 @@
   "main": "./index.js",
   "scripts": {
     "test": "nodeunit test/tests.js",
-    "express": "node test/server.js",
-    "http": "node test/http.js",
-    "simple": "node test/simple.js",
-    "build": "grunt build",
-    "lint": "jshint lib/express-useragent.js",
-    "prepublishOnly": "npm run build"
+    "example:express": "node test/server.js",
+    "example:http": "node test/http.js",
+    "example:simple": "node test/simple.js",
+    "build": "tsc",
+    "lint": "dprint check"
   },
   "directories": {
     "lib": "lib",
