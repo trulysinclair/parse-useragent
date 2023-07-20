@@ -1,59 +1,23 @@
 {
-  "name": "express-useragent",
-  "description": "ExpressJS/Connect/TrinteJS user-agent middleware exposing",
+  "name": "@trulysinclair/parse-useragent",
+  "description": "useragent parser library for Node.js, ported from express-useragent",
   "version": "1.0.15",
-  "homepage": "https://github.com/biggora/express-useragent/",
+  "homepage": "https://github.com/trulysinclair/parse-useragent/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/biggora/express-useragent.git"
+    "url": "git://github.com/trulysinclair/parse-useragent.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Aleksejs Gordejevs",
-    "email": "aleksej@gordejev.lv",
-    "url": "https://github.com/biggora"
+    "name": "Sinclair",
+    "email": "truly.sinclair@gmail.com",
+    "url": "https://github,com/trulysinclair"
   },
-  "contributors": [
-    {
-      "name": "Kacper Glowacki",
-      "url": "https://github.com/kacperus"
-    },
-    {
-      "name": "elisee",
-      "url": "https://github.com/elisee"
-    },
-    {
-      "name": "Bitdeli Chef",
-      "url": "https://github.com/bitdeli-chef"
-    },
-    {
-      "name": "Nicolas Tobo",
-      "url": "https://github.com/nicolastobo"
-    },
-    {
-      "name": "Samy Pess�",
-      "url": "https://github.com/SamyPesse"
-    },
-    {
-      "name": "Artem Nezvigin",
-      "url": "https://github.com/artnez"
-    },
-    {
-      "name": "Josh Dickson",
-      "url": "https://github.com/joshdickson40"
-    },
-    {
-      "name": "Kewang",
-      "url": "https://github.com/kewang"
-    }
-  ],
   "keywords": [
     "useragent",
     "connect",
     "express",
-    "trinte",
-    "browser",
-    "compound",
+    "express-useragent",
     "middleware"
   ],
   "main": "./index.js",
