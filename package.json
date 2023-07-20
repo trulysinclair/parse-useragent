@@ -73,15 +73,18 @@
   "engines": {
     "node": ">=4.5"
   },
-  "dependencies": {},
   "devDependencies": {
     "bower": "*",
+    "dprint": "^0.39.1",
     "express": ">= 4.16.4",
     "grunt": "^1.2.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "jshint": "*",
     "load-grunt-tasks": "^3.2.0",
-    "nodeunit": "^0.11.3"
-  }
+    "nodeunit": "^0.11.3",
+    "turbo": "^1.10.9",
+    "typescript": "^5.1.6"
+  },
+  "packageManager": "yarn@3.6.1"
 }

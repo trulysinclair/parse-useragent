@@ -1,16 +1,14 @@
-[![build status](https://secure.travis-ci.org/biggora/express-useragent.png)](http://travis-ci.org/biggora/express-useragent)
-[![NPM version](https://badge.fury.io/js/express-useragent.png)](http://badge.fury.io/js/express-useragent)
-[![Git commit with emojis!](https://img.shields.io/badge/gitmoji-git%20commit%20with%20emojis!-brightgreen.svg)](https://gitmoji.js.org)
 # Fast Middleware exposing user-agent for [NodeJS](http://nodejs.org/)
 
-express-useragent is a simple NodeJS/ExpressJS user-agent middleware exposing user-agent details to your application and views.
+@trulysinclair/parse-useragent is a simple NodeJS/ExpressJS user-agent middleware exposing user-agent details to your application and views.
 
 ## Installation
 
-Installation is done using the Node Package Manager (npm). If you don't have npm installed on your system you can download it from [npmjs.org](http://npmjs.org/)
-To install express-useragent:
 ```bash
-    $ npm install express-useragent --save
+# npm
+npm install --save @trulysinclair/parse-useragent
+# Yarn
+yarn add @trulysinclair/parse-useragent
 ```
 
 ## Usage overview
@@ -18,45 +16,41 @@ To install express-useragent:
 ### Simple Node App
 
 ```js
-var http = require('http')
-  , useragent = require('express-useragent');
+var http = require("http"),
+  useragent = require("@trulysinclair/parse-useragent");
 
-var srv = http.createServer(function (req, res) {
-  var source = req.headers['user-agent'],
-  ua = useragent.parse(source);
-  res.writeHead(200, {'Content-Type': 'text/plain'});
+var app = http.createServer(function(req, res) {
+  var source = req.headers["user-agent"],
+    ua = useragent.parse(source);
+  res.writeHead(200, { "Content-Type": "text/plain" });
   res.end(JSON.stringify(ua));
 });
 
-srv.listen(3000);
+app.listen(3000);
 ```
 
-### for [TrinteJS](http://www.trintejs.com/)
-
-is permanently included
-
-#### manual setup in project config/middleware.js
+<!-- #### manual setup in project config/middleware.js
 
 ```js
-var useragent = require('express-useragent');
+var useragent = require("@trulysinclair/parse-useragent");
 
-module.exports = function (app, express) {
-    app.use(function () {
-        app.use(useragent.express());
-    });
+module.exports = function(app, express) {
+  app.use(function() {
+    app.use(useragent.express());
+  });
 };
-```
+``` -->
 
-### for [ExpressJS](http://expressjs.com/)
+### For [ExpressJS](http://expressjs.com/)
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
-var useragent = require('express-useragent');
+var useragent = require("@trulysinclair/parse-useragent");
 
 app.use(useragent.express());
-app.get('/', function(req, res){
-    res.send(req.useragent);
+app.get("/", function(req, res) {
+  res.send(req.useragent);
 });
 app.listen(3000);
 ```
@@ -75,72 +69,66 @@ module provides details such as the following:
   "platform":"Microsoft Windows",
   "source":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79..."
 }
-
 ```
 
 ## Accessing the User-Agent
 
-If you are using `express` or `connect`, then `express-useragent`
+If you are using `express` or `connect`, then `@trulysinclair/parse-useragent`
 provides an easy way to access the user-agent as:
 
 - `req.useragent` from your app server
 - `useragent` helper accessible from your `express` views.
 
-## Client Side
+<!-- ## Client Side
 
-* Clone the repo: `git clone git://github.com/biggora/express-useragent.git`
-* Or Install with [Bower](http://twitter.github.com/bower): `bower install express-useragent`.
+- Clone the repo: `git clone git://github.com/biggora/@trulysinclair/parse-useragent.git`
+- Or Install with [Bower](http://twitter.github.com/bower): `bower install @trulysinclair/parse-useragent`.
 
-The client side version of express-useragent available in the `lib/` subdirectory.
+The client side version of @trulysinclair/parse-useragent available in the `lib/` subdirectory.
 
 #### Include file in your HTML. The minimum required for this plugin are:
+
 ```
-    <script type="text/javascript" src="/path/to/express-useragent.js"></script>
+<script type="text/javascript" src="/path/to/@trulysinclair/parse-useragent.js"></script>
 ```
+
 #### Execute the plugin:
+
 ```javascript
-    var userAgent = new UserAgent().parse(navigator.userAgent);
-```
+var userAgent = new UserAgent().parse(navigator.userAgent);
+``` -->
 
 ## Running Tests
 
-Ensure you have [nodeunit](https://github.com/caolan/nodeunit) by running ```npm install -g nodeunit```.
-Then, run ```npm test```.
+Ensure you have [nodeunit](https://github.com/caolan/nodeunit) by running `npm install -g nodeunit`.
+Then, run `npm test`.
 
 ```bash
 npm install
 npm test
 ```
 
-#### Run Example Node App
+### Run Example Node App
 
 ```bash
 npm run-script http
 ```
 
-#### Run Example Express App
+### Run Example Express App
 
 ```bash
 npm run-script express
 ```
 
-## In the Wild
+## Original Author of `express-useragent`
 
-The following projects use express-useragent.
-
-If you are using express-useragent in a project, app, or module, get on the list below
-by getting in touch or submitting a pull request with changes to the README.
-
-
-## Author
-
-Aleksejs Gordejevs (aleksej@gordejev.lv).
+Aleksejs Gordejevs <aleksej@gordejev.lv>
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2012-2020 Aleksejs Gordejevs <aleksej@gordejev.lv>
+Copyright (c) 2023 TrulySinclair <truly.sinclair@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -160,15 +148,3 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-## Resources
-
-- Visit the [author website](http://www.gordejev.lv).
-- Follow [@biggora](https://twitter.com/#!/biggora) on Twitter for updates.
-- Report issues on the [github issues](https://github.com/biggora/express-useragent/issues) page.
-
-[![Analytics](https://ga-beacon.appspot.com/UA-22788134-5/express-useragent/readme)](https://github.com/igrigorik/ga-beacon)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/biggora/express-useragent/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
